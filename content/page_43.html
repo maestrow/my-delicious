@@ -1,0 +1,1565 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-store, must-revalidate, no-cache, private, max-age=0, post-check=0, pre-check=0" />
+<meta http-equiv="X-Xss-Protection" content="0" />
+<meta name='apple-itunes-app' content='app-id=580295142'/>
+<meta name="viewport" content="width=device-width ,initial-scale=1.0">
+
+    <title>Delicious</title>
+
+
+<meta name="description" content="Keep, share, and discover the best of the Web using Delicious, the world&#039;s leading social bookmarking service." />
+
+
+
+<meta name="keywords" content="del.icio.us, delicious, bookmarks, bookmark, social bookmarking, links, link, stacks, stack" />
+
+
+
+<meta name="language" content="en" />
+<script type="text/javascript">
+    var D = {};
+</script>
+<link href="/img/fav-icon.png" rel="icon" />
+
+  <link rel="stylesheet" type="text/css" media="screen" href="https://del.icio.us/static/css/style.css?v=1339-36-gb002d" />
+
+
+<link href="https://del.icio.us/static/css/responsive-style.css?v=1339-36-gb002d" rel="stylesheet" type="text/css">
+<link href="https://del.icio.us/static/css/font-awesome.min.css?v=1339-36-gb002d" rel="stylesheet" type="text/css">
+<link href="https://del.icio.us/static/css/popcon.css?v=1339-36-gb002d" rel="stylesheet" type="text/css">
+<link href="https://del.icio.us/static/css/jquery.mCustomScrollbar.min.css?v=1339-36-gb002d" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="https://del.icio.us/static/js/jquery-1.11.3.min.js?v=1339-36-gb002d"></script>
+
+
+<script type="text/javascript" src="https://del.icio.us/static/js/jquery.mCustomScrollbar.concat.min.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/common.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/popcon.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/del_new.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/fblogin.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/gpluslogin.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/twtrlogin.js?v=1339-36-gb002d"></script>
+
+<script type="text/javascript">
+  var onloadCallback = function() {
+    grecaptcha.render('html_element', {
+      'sitekey' : '6Ld2XScTAAAAAOupdoiO6KRii_labn6piwMNVMZL',
+      'callback' : function(d_recaptcha_response) {	
+        $("#recaptcha-response").val(d_recaptcha_response);
+      }
+    });
+  };
+</script>
+</head>
+<body id="index">
+
+
+
+
+
+
+
+   
+<div id="delAlert" >
+    <div class="alertbg"></div>
+    <div class="alert">
+	    <div class="con">
+		    <div class="head"></div>
+		    <div class="msg"></div>
+		<div class="btns"></div>
+		<div class="clear"></div>
+	    </div>
+    </div>
+</div>
+<div id="loginRequired" class="hide">
+    <p class="memberLogin">Already a member? <a href="#userlogin" id="loginField" class="delPopcon" data-close-prev>Log in</a></p>
+    <div class="popInner">
+	<h3>Sign up with your...</h3>
+	<div class="socialMediaOuterWrapper">
+	    <a href="#" class="twtrlogin">
+		<div class="socialMediaBlock twitterBlock">
+		    <div class="socialIconPanel"><i class="fa fa-twitter"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Twitter</strong></p></div>
+		</div>
+	    </a>
+	    <a href="#" class="fblogin">
+		<div class="socialMediaBlock facebookBlock">
+		    <div class="socialIconPanel"><i class="fa fa-facebook"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Facebook</strong></p></div>
+		</div>
+	    </a>
+	    <a href="#" class="gpluslogin">
+		<div class="socialMediaBlock googleplusBlock">
+		    <div class="socialIconPanel"><i class="fa fa-google-plus"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Google+</strong></p></div>
+		</div>
+	    </a>
+	</div>
+	<div class="popupBottomCont">
+	    <p>or</p>
+	</div>
+	<p class="emailAddTxt"><a href="#usersignup" class="delPopcon" data-close-prev>Sign Up with your email address</a></p>
+    </div>
+</div>
+
+<div id="addTagPop" class="hide">
+    <div class="popInner">
+	<h3>Add Tags</h3>
+	<form name="frm_addTags" id="frm_addTags" action="" method="post" target="_top">
+	    <input type="hidden" name="url" id="url">
+	    <div class="signInFlds noBtmBdr saveLinkPop">
+		<label>Type tags to add</label>
+		<input type="text" name="tags" id="tags">
+		<div class="saveSocialLinks">		    
+		    <div class="saveRightBtns">
+			<button type="button" class="cancleBtn" onclick="javascript:popcon.close($('.popcon:eq(0)'));">Cancel</button>
+			<button type="submit" class="saveLinkBtn">Add Tags</button>
+		    </div>
+		</div>		
+	    </div>
+	</form>	
+    </div>
+</div>
+
+<div id="dupTagPop" class="hide">
+    <div class="popInner">
+	<h3>Duplicate Tags</h3>
+	<form name="frm_dupTags" id="frm_dupTags" action="" method="post" target="_top">
+	    <input type="hidden" name="url" id="url">
+	    <input type="hidden" name="tags" id="tags">
+	    <div class="signInFlds noBtmBdr saveLinkPop">
+		<label>Common tags to remove</label>
+		<div id="duptaghtml"></div>
+		<div class="saveSocialLinks">		    
+		    <div class="saveRightBtns">
+			<button type="button" class="cancleBtn" onclick="javascript:popcon.close($('.popcon:eq(0)'));">Cancel</button>
+			<button type="submit" class="saveLinkBtn">Remove Tags</button>
+		    </div>
+		</div>		
+	    </div>
+	</form>	
+    </div>
+</div>
+
+<div id="renTagPop" class="hide">
+    <div class="popInner">
+	<h3>Rename Tags</h3>
+	<form name="frm_renTags" id="frm_renTags" action="" method="post" target="_top">
+	    <input type="hidden" name="url" id="url">
+	    <input type="hidden" name="tags" id="tags">
+	    <div class="signInFlds noBtmBdr saveLinkPop">
+		<label>Select a tag to rename</label>
+		<select name="oldTag"></select>
+		<label>New tag name</label>
+		<input type="text" name="newTag">
+		<div class="saveSocialLinks">		    
+		    <div class="saveRightBtns">
+			<button type="button" class="cancleBtn" onclick="javascript:popcon.close($('.popcon:eq(0)'));">Cancel</button>
+			<button type="submit" class="saveLinkBtn">Rename Tag</button>
+		    </div>
+		</div>		
+	    </div>
+	</form>	
+    </div>
+</div>
+
+
+<div id="trendingSharePop" class="hide">
+    <div class="popInner">
+    <h3>Share This URL With Others!</h3>
+    <form name="frm_shareLink" id="frm_shareLink" action="" method="post" target="_top">
+	<input type="hidden" name="url" value="">              
+	<div class="signInFlds noBtmBdr saveLinkPop">
+	    <label><span class="youtubeIcon"></span><span id="url_lbl"></span></label>                  
+	    
+	    <label>Type Emails or User Names (comma-separated)</label>
+	    <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+	    
+	    <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+	    <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+	    
+	    <div class="saveSocialLinks">
+		<div class="saveRightBtns">                          
+		    <button type="submit" class="saveLinkBtn">Share</button>
+		</div>
+	    </div>
+	    <div class="bottomSocialIcons">
+		<ul>
+		  <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=#title#&url=#url#&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+		  <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=#url#','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+		  <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=#url#','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+		  <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=#url#&title=#title#','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+		  <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=#url#&title=#title#','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+		  <li class="email"><a href='mailto:?subject=#title#&body=#url#'><i class="fa fa-envelope"></i> Email</a></li>
+		</ul>
+	    </div>
+	</div>
+    </form>	
+  </div>    
+</div>
+
+<div id="savePop" class="hide">
+    <div class="popInner">
+	<h3>Save Link</h3>	
+	
+	<form name="frm_saveLink" id="frm_saveLink" action="" method="post">
+	    <input type="hidden" name="url" value="">
+	    <input type="hidden" name="replace" value="">	    
+	    
+	    <div class="signInFlds noBtmBdr saveLinkPop">
+		<label>Title</label>
+		<input type="text" name="title">
+		
+		<label>Tags <i class="fa fa-question-circle" title="Tags are an important part of organizing on Delicious. Using tags that are smart and simple benifits both you and the community. <ul><li>Lowercase tags are recommended: <code>webdev</code> instead of <code>WebDev</code></li><li>Spaces are allowed but not recommended: <code>machine-learning</code> instead of <code>Machine Learning</code></li><li>Reuse your tags and the tags of the community as much as possible.</li><li>Use ! at the start of a tag if it's unrelated to the link content: <code>!unread</code>, <code>!savedforlater</code>, etc.</li></ul>"></i><span> (Separated by comma)</span></label>
+		<input type="text" name="tags">
+		
+		<label>Comment <span>(Max. <span class="rem">1000</span> characters)</span></label>
+		<textarea name="note"></textarea>
+		
+		<div class="saveSocialLinks">
+		    <div class="saveLeftBtns">
+			<a href="#" class="privateBtn hide"><i class="fa fa-lock"></i>  Private</a>
+			<a href="#" class="publicBtn "><i class="fa fa-unlock"></i>  Public</a>			
+		    </div>
+		    <div class="saveRightBtns">
+			<button type="button" class="cancleBtn" onclick="javascript:popcon.close($('.popcon:eq(0)'));">Cancel</button>
+			<button type="submit" class="saveLinkBtn">Save Link</button>
+		    </div>
+		</div>
+		<input type="checkbox" name="private" class="hide">
+	    </div>
+	</form>	
+    </div>
+</div>
+
+<div id="userlogin" class="hide">
+    <div class="popInner">
+	<h3>Sign in</h3>
+	<div class="socialMediaOuterWrapper">
+	    <a href="#" class="twtrlogin">
+		<div class="socialMediaBlock twitterBlock">
+		    <div class="socialIconPanel"><i class="fa fa-twitter"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Twitter</strong></p></div>
+		</div>
+	    </a>
+	    <a href="#" class="fblogin">
+		<div class="socialMediaBlock facebookBlock">
+		    <div class="socialIconPanel"><i class="fa fa-facebook"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Facebook</strong></p></div>
+		</div>
+	    </a>
+	    <a href="#" class="gpluslogin">
+		<div class="socialMediaBlock googleplusBlock">
+		    <div class="socialIconPanel"><i class="fa fa-google-plus"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Google+</strong></p></div>
+		</div>
+	    </a>
+	</div>
+	<div class="popupBottomCont"><!----></div>
+	<form name="login-form" id="login-form" action="login" method="post">
+	<div class="signInFlds">
+	    <input type="text" placeholder="Username or Email" name="username" />
+	    <input type="password" placeholder="Password" name="password" />
+	    <div class="signBtnPan">
+		<button type="submit">Sign In</button>
+		<p><a href="#userforgotpassword" class="delPopcon" data-close-prev>Forgot password?</a></p>
+	    </div>
+	</div>
+	</form>
+	<p class="emailAddTxt"><a href="#usersignup" class="delPopcon" data-close-prev>Sign Up with your email address</a></p>
+    </div>
+</div> 
+
+<div id="usersignup" class="hide">
+    <div class="popInner">
+	<h3>Sign up</h3>	
+	<div class="popupBottomCont"></div>
+	<form name="signup-form" id="signup-form" action="register" method="post">
+	<div class="signInFlds noBtmBdr">
+	    <input type="text" placeholder="Full Name" name="display-name" />
+	    <input type="text" placeholder="Email" name="email" />
+	    <input type="text" placeholder="Username" name="username" />
+	    <input type="password" placeholder="Password" name="password" />	    
+            <input type="hidden" name="recaptcha_response_field" value="nocap"/>	    
+	    <div class="signupChekBox"><input type="checkbox" name="option_terms" id="option_terms" checked><label for="optin">Stay in the loop with Delicious Trending</label></div>
+	    <div class="labelTerms">By clicking the button, you agree to the <a href="/terms" target="_blank">Terms & Conditions</a>.</div>
+	    <div class="signBtnPan">
+		<button type="submit">Sign Up</button>
+	    </div>
+	</div>
+	</form>	
+    </div>
+</div>
+
+<div id="userforgotpassword" class="hide">
+    <div class="popInner">
+	<h3>Forgot Password?</h3>	
+	<div class="popupBottomCont"></div>
+	<p>Please enter your username below and press the send button.</br>A password reset link will be sent to you.</p>
+	<p>If you are unable to access the email address originally associated with your Delicious account, we recommend creating a new account.</p>
+	<form name="forgot-password-form" id="forgot-password-form" action="" method="post">
+	<div class="signInFlds noBtmBdr">	    
+	    <input type="text" name="username_or_email" id="usernameEmail" placeholder="Enter Username or Email" />
+	    <div class="signBtnPan">
+		<button type="submit">Send</button>
+	    </div>
+	</div>
+	</form>	
+    </div>
+</div>
+<!--header starts-->
+<div class="header">
+    <div class="container">
+	<div class="logo">
+	    <a href="https://del.icio.us" target="_top">Delicious</a>
+	</div>
+	<div class="navPanel">
+	    <ul>
+		    <li class="toplink"><i class="fa fa-sign-in"></i> <a href="https://del.icio.us/login" class="" target="_top">Sign In</a></li>
+		    <li class="signupBtn"><a href="https://del.icio.us/join" target="_top">Sign Up</a></li></ul>
+	</div>
+	<div class="headerSearchPan">
+            	<div class="searchPanel">
+		    <form id="global-searchform" action="https://del.icio.us/search" method="get" target="_top">
+                    <input autocomplete="off" name="p" id="global-searchinput" class="searchInput" placeholder="Search shmelev's links" type="text"/>
+		    
+			<input type="hidden" name="user" value="shmelev">
+		    
+		    <button type="submit">Search</button>
+		    </form>
+            	</div>
+            </div>
+	<div class="navPanSmallScrn">
+	    <ul>
+		<li class="searchBtn"><a href="#"><i class="fa fa-search"></i></a></li>
+		<li class="colaspeMenu"><a href="#"><i class="fa fa-bars"></i></a></li>
+	    </ul>
+	</div>
+	<div class="smallScrnSrch">
+	    <div class="searchPanel">
+		<form id="global-searchform" action="https://del.icio.us/search" method="get" target="_top">
+		<input autocomplete="off" name="p" id="global-searchinput" class="searchInput" placeholder="Search shmelev's links" type="text"/>
+		
+		    <input type="hidden" name="user" value="shmelev">
+		
+		<button type="submit">Search</button>
+		</form>
+	    </div>
+	</div>
+	<div class="smallScrnMenu">
+	    <ul>
+		    <li><a href="https://del.icio.us/login" class="" target="_top"><i class="fa fa-sign-in"></i> Sign In</a></li>
+		    <li class="toplink"><a href="https://shop.icio.us" target="_blank"><i class="fa fa-shopping-cart"></i> Shop</a></li>
+		    <li class="signupBtn"><a href="https://del.icio.us/join" target="_top">Sign Up</a></li></ul>
+	</div>
+	<div class="clear"><!----></div>	
+    </div>
+</div>
+
+<div class="saveDialog" id="saveDialog0">
+  <div class="saveBody"></div>
+  <div class="clear"></div>
+</div>
+
+<!--header ends-->
+
+<!--top ad starts-->
+<!--top ad ends-->
+<div class="breadcrumb">
+    <div class="container">
+        <div class="breadcrumbPanel">
+            <div class="container">
+                <ul class="breadcrumb">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/shmelev">User</a></li>
+                    <li><a href="/shmelev">shmelev</a></li>
+                    
+                        <li><a href="#">Page 43</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="profileContent userHomeContent">
+    <div class="container">
+        <div class="contentPanel">
+            <div class="profileLeftPan">
+                		    
+                    <div class="profileDetails">
+			
+			
+			    
+				<a rel="nofollow" class="followBtn" href="https://del.icio.us/settings/networkedit?action=add&username=shmelev&jump=/shmelev">Follow</a>
+			    
+			
+                        <div class="profileBrief">
+			    <div class="profileHeading">
+				<h2>Username: shmelev</h2>
+				
+				<h3>Name: Andrew Shmelev</h3>
+				
+				<h4>Joined: 30 Aug 2010 </h4>
+				<div class="tabMenu">
+	<li class="colaspeTabMenu"><a href="#"><i class="fa fa-bars"></i></a></li>
+	<ul>
+	    
+	    <li  class="active" ><a href="/shmelev/">shmelev</a></li>
+	    <li ><a href="/feed/shmelev">Feed</a></li>
+	    
+	    <li ><a href="/following/shmelev">Following</a></li>
+	    <li ><a href="/followers/shmelev">Followers</a></li>
+	</ul>
+    </div>
+			    </div>
+			    <div class="pulsIcon profileInfoIcon">
+                            	<span><i class="fa fa-plus"></i> Profile Info</span>
+                            </div>
+			    <div class="profileInfo">
+								
+				<div class="profileLinks">
+				    
+				    <p>Following:<a href="https://del.icio.us/following/shmelev">
+					
+					  0 Users
+					</a>
+				    </p>
+				    
+				    
+				    
+					
+					<p><a href="https://del.icio.us/shmelev">1034 Links</a></p>
+					
+				    
+				    
+				</div>
+			    </div>
+                        </div>
+                    </div>                    
+        
+                
+    
+    
+    
+    <div class="pulsIcon tagsPanelIcon">
+        <span><i class="fa fa-plus"></i> Tags</span>
+    </div>
+    <div class="tagsPanel">
+        <h3>Tags</h3>
+        <span class="viewAll"><a href="http://del.icio.us/shmelev/tags">View All</a></span>
+        <div class="scroll_300 mCustomScrollbar light" data-mcs-theme="minimal-dark">
+            <div class="tags shuffleFontSize">	    
+                
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/javascript">javascript</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/.net">.net</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/nodejs">nodejs</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/semantic">semantic</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/C#">C#</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/extjs">extjs</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/книги">книги</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/tools">tools</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/ремонт">ремонт</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/покупки">покупки</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/android">android</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/F#">F#</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/игры">игры</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/музыка">музыка</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/linq">linq</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/что_я_пою">что_я_пою</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/москва">москва</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/интернет-сервисы">интернет-сервисы</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/asp.net">asp.net</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/психология">психология</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/блоги">блоги</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/css">css</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/гитара">гитара</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/tutorial">tutorial</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/порталы">порталы</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/debugging">debugging</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/programming_game">programming_game</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/туризм">туризм</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/asp.net_mvc">asp.net_mvc</a>
+                  
+                    
+                
+                <p><a href="http://del.icio.us/shmelev/tags">View All</a></p>
+            </div>
+        </div>
+    </div>
+    
+
+            </div>
+            <div class="profileMidpanel">
+                <div class="tabMenu">
+	<li class="colaspeTabMenu"><a href="#"><i class="fa fa-bars"></i></a></li>
+	<ul>
+	    
+	    <li  class="active" ><a href="/shmelev/">shmelev</a></li>
+	    <li ><a href="/feed/shmelev">Feed</a></li>
+	    
+	    <li ><a href="/following/shmelev">Following</a></li>
+	    <li ><a href="/followers/shmelev">Followers</a></li>
+	</ul>
+    </div>
+                <div class="userPageFilter">
+	<ul id="linkViewOptions" class="right dropdown">
+	    <li class="default dropdown">
+		 <span class="arrow"></span>
+		 <ul class="glowShadow expanding">
+		     <li class="element ">
+			 <span><a href="?link_view=compact">Compact View</a></span>
+		     </li>
+		     <li class="element  selected ">
+			 <span><a href="?link_view=normal">Normal View</a></span>
+		     </li>
+		     <li class="element ">
+			 <span><a href="?link_view=expanded">Expanded View</a></span>
+		     </li>
+		 </ul>
+	    </li>
+	</ul>
+    </div>
+                <div class="tabSubMenu" id="bulkEditActions">
+                    
+                </div>
+                <div class="tagsFilter">
+	<div class="searchPanel tagsSeacrhPanel">
+	    <form id="global-searchform" name="magicboxform" action="" method="get">
+	    <input name="tagtype" id="addtagType" value="tag" type="hidden">
+	    <input autocomplete="off" name="addtag" id="global-searchinput" class="searchInput" placeholder="Add a tag filter" type="text">
+		<button type="submit" class="searchTagBtn"><i class="fa fa-search" aria-hidden="true"></i> <span>Search by Tag</span></button>
+	    </form>
+	</div>
+    </div>
+                
+                    <h1>Links <span>421</span> through <span>430</span> of <span>1034</span> Andrew Shmelev's Bookmarks</h1>
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="2a0a3b4678786885f7c7f2327a043441" date="1343023812">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/2a0a3b4678786885f7c7f2327a043441" class="title" title="Хостинг и Домен - Создание и размещение сайтов.">Хостинг и Домен - Создание и размещение сайтов.</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://93w.ru/" target="_blank" rel="nofollow">http://93w.ru/</a></p>
+        <p><a href="http://93w.ru" target="_blank" rel="nofollow">93w.ru</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on July 22, 2012</p>
+        <div class="savesCount">
+                <a href="/url/2a0a3b4678786885f7c7f2327a043441" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>1 <span>Save</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+                    
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/хостинг">хостинг</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://93w.ru/">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://93w.ru/</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=%D0%A5%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B3%20%D0%B8%20%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%20-%20%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B8%20%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2.&url=http%3A//93w.ru/&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//93w.ru/','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//93w.ru/','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//93w.ru/&title=%D0%A5%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B3%20%D0%B8%20%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%20-%20%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B8%20%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2.','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//93w.ru/&title=%D0%A5%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B3%20%D0%B8%20%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%20-%20%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B8%20%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2.','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=%D0%A5%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B3%20%D0%B8%20%D0%94%D0%BE%D0%BC%D0%B5%D0%BD%20-%20%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B8%20%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2.&body=http%3A//93w.ru/'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="0a53c1cb5b204915915bc87c929c2d6d" date="1342706641">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/0a53c1cb5b204915915bc87c929c2d6d" class="title" title="Why Handlebars?">Why Handlebars?</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://blog.sproutcore.com/why-handlebars/" target="_blank" rel="nofollow">http://blog.sproutcore.com/why-handlebars/</a></p>
+        <p><a href="http://blog.sproutcore.com" target="_blank" rel="nofollow">blog.sproutcore.com</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on July 19, 2012</p>
+        <div class="savesCount">
+                <a href="/url/0a53c1cb5b204915915bc87c929c2d6d" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>4 <span>Saves</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+                    
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/Handlebars">Handlebars</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/SprouteCore">SprouteCore</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/Ember">Ember</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://blog.sproutcore.com/why-handlebars/">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://blog.sproutcore.com/why-handlebars/</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=Why%20Handlebars%3F&url=http%3A//blog.sproutcore.com/why-handlebars/&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//blog.sproutcore.com/why-handlebars/','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//blog.sproutcore.com/why-handlebars/','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//blog.sproutcore.com/why-handlebars/&title=Why%20Handlebars%3F','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//blog.sproutcore.com/why-handlebars/&title=Why%20Handlebars%3F','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=Why%20Handlebars%3F&body=http%3A//blog.sproutcore.com/why-handlebars/'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="e8a278439dcb1c64c57854b0652aca16" date="1342694521">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/e8a278439dcb1c64c57854b0652aca16" class="title" title="Data binding in Extjs 4 : grid, form, property-grid">Data binding in Extjs 4 : grid, form, property-grid</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://blog.dnet-ebusiness-suite.com/2012/03/data-binding-in-extjs-4-grid-form.html" target="_blank" rel="nofollow">http://blog.dnet-ebusiness-suite.com/2012/03/data-binding-in-extjs-4-grid-f...</a></p>
+        <p><a href="http://blog.dnet-ebusiness-suite.com" target="_blank" rel="nofollow">blog.dnet-ebusiness-suite.com</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on July 19, 2012</p>
+        <div class="savesCount">
+                <a href="/url/e8a278439dcb1c64c57854b0652aca16" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>1 <span>Save</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+                    
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/javascript">javascript</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/extjs">extjs</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/MVVM">MVVM</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://blog.dnet-ebusiness-suite.com/2012/03/data-binding-in-extjs-4-grid-form.html">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://blog.dnet-ebusiness-suite.com/2012/03/data-binding-in-extjs-4-grid-form.html</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=Data%20binding%20in%20Extjs%204%20%3A%20grid%2C%20form%2C%20property-grid&url=http%3A//blog.dnet-ebusiness-suite.com/2012/03/data-binding-in-extjs-4-grid-form.html&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//blog.dnet-ebusiness-suite.com/2012/03/data-binding-in-extjs-4-grid-form.html','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//blog.dnet-ebusiness-suite.com/2012/03/data-binding-in-extjs-4-grid-form.html','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//blog.dnet-ebusiness-suite.com/2012/03/data-binding-in-extjs-4-grid-form.html&title=Data%20binding%20in%20Extjs%204%20%3A%20grid%2C%20form%2C%20property-grid','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//blog.dnet-ebusiness-suite.com/2012/03/data-binding-in-extjs-4-grid-form.html&title=Data%20binding%20in%20Extjs%204%20%3A%20grid%2C%20form%2C%20property-grid','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=Data%20binding%20in%20Extjs%204%20%3A%20grid%2C%20form%2C%20property-grid&body=http%3A//blog.dnet-ebusiness-suite.com/2012/03/data-binding-in-extjs-4-grid-form.html'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="2438ab429834025675cac65d5be450c8" date="1342693771">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/2438ab429834025675cac65d5be450c8" class="title" title="20 JavaScript Frameworks: MVVM Templating, Licenses etc. | FariDesign.net">20 JavaScript Frameworks: MVVM Templating, Licenses etc. | FariDesign.net</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://www.faridesign.net/2012/04/20-javascript-frameworks-mvvm-templating-licenses-etc/" target="_blank" rel="nofollow">http://www.faridesign.net/2012/04/20-javascript-frameworks-mvvm-templating-...</a></p>
+        <p><a href="http://www.faridesign.net" target="_blank" rel="nofollow">www.faridesign.net</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on July 19, 2012</p>
+        <div class="savesCount">
+                <a href="/url/2438ab429834025675cac65d5be450c8" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>21 <span>Saves</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+                    
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/javascript">javascript</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://www.faridesign.net/2012/04/20-javascript-frameworks-mvvm-templating-licenses-etc/">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://www.faridesign.net/2012/04/20-javascript-frameworks-mvvm-templating-licenses-etc/</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=20%20JavaScript%20Frameworks%3A%20MVVM%20Templating%2C%20Licenses%20etc.%20%7C%20FariDesign.net&url=http%3A//www.faridesign.net/2012/04/20-javascript-frameworks-mvvm-templating-licenses-etc/&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//www.faridesign.net/2012/04/20-javascript-frameworks-mvvm-templating-licenses-etc/','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//www.faridesign.net/2012/04/20-javascript-frameworks-mvvm-templating-licenses-etc/','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//www.faridesign.net/2012/04/20-javascript-frameworks-mvvm-templating-licenses-etc/&title=20%20JavaScript%20Frameworks%3A%20MVVM%20Templating%2C%20Licenses%20etc.%20%7C%20FariDesign.net','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//www.faridesign.net/2012/04/20-javascript-frameworks-mvvm-templating-licenses-etc/&title=20%20JavaScript%20Frameworks%3A%20MVVM%20Templating%2C%20Licenses%20etc.%20%7C%20FariDesign.net','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=20%20JavaScript%20Frameworks%3A%20MVVM%20Templating%2C%20Licenses%20etc.%20%7C%20FariDesign.net&body=http%3A//www.faridesign.net/2012/04/20-javascript-frameworks-mvvm-templating-licenses-etc/'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="06cde8815926b54bd55ce48725b1dfcc" date="1342693611">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/06cde8815926b54bd55ce48725b1dfcc" class="title" title="Блок, Элемент, Модификатор (БЭМ, BEM) — я.ру">Блок, Элемент, Модификатор (БЭМ, BEM) — я.ру</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://clubs.ya.ru/bem/posts.xml?tb=10&amp;posttype=&amp;nocookiesupport=yes" target="_blank" rel="nofollow">http://clubs.ya.ru/bem/posts.xml?tb=10&amp;posttype=&amp;nocookiesupport=yes</a></p>
+        <p><a href="http://clubs.ya.ru" target="_blank" rel="nofollow">clubs.ya.ru</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on July 19, 2012</p>
+        <div class="savesCount">
+                <a href="/url/06cde8815926b54bd55ce48725b1dfcc" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>1 <span>Save</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+                    
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/БЭМ">БЭМ</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://clubs.ya.ru/bem/posts.xml?tb=10&amp;posttype=&amp;nocookiesupport=yes">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://clubs.ya.ru/bem/posts.xml?tb=10&amp;posttype=&amp;nocookiesupport=yes</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=%D0%91%D0%BB%D0%BE%D0%BA%2C%20%D0%AD%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%2C%20%D0%9C%D0%BE%D0%B4%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80%20%28%D0%91%D0%AD%D0%9C%2C%20BEM%29%C2%A0%E2%80%94%20%D1%8F.%D1%80%D1%83&url=http%3A//clubs.ya.ru/bem/posts.xml%3Ftb%3D10%26posttype%3D%26nocookiesupport%3Dyes&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//clubs.ya.ru/bem/posts.xml%3Ftb%3D10%26posttype%3D%26nocookiesupport%3Dyes','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//clubs.ya.ru/bem/posts.xml%3Ftb%3D10%26posttype%3D%26nocookiesupport%3Dyes','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//clubs.ya.ru/bem/posts.xml%3Ftb%3D10%26posttype%3D%26nocookiesupport%3Dyes&title=%D0%91%D0%BB%D0%BE%D0%BA%2C%20%D0%AD%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%2C%20%D0%9C%D0%BE%D0%B4%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80%20%28%D0%91%D0%AD%D0%9C%2C%20BEM%29%C2%A0%E2%80%94%20%D1%8F.%D1%80%D1%83','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//clubs.ya.ru/bem/posts.xml%3Ftb%3D10%26posttype%3D%26nocookiesupport%3Dyes&title=%D0%91%D0%BB%D0%BE%D0%BA%2C%20%D0%AD%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%2C%20%D0%9C%D0%BE%D0%B4%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80%20%28%D0%91%D0%AD%D0%9C%2C%20BEM%29%C2%A0%E2%80%94%20%D1%8F.%D1%80%D1%83','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=%D0%91%D0%BB%D0%BE%D0%BA%2C%20%D0%AD%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%2C%20%D0%9C%D0%BE%D0%B4%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80%20%28%D0%91%D0%AD%D0%9C%2C%20BEM%29%C2%A0%E2%80%94%20%D1%8F.%D1%80%D1%83&body=http%3A//clubs.ya.ru/bem/posts.xml%3Ftb%3D10%26posttype%3D%26nocookiesupport%3Dyes'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="5a1cde3e93ac1f524c973478de6106c8" date="1342692537">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/5a1cde3e93ac1f524c973478de6106c8" class="title" title="The Top 10 Javascript MVC Frameworks Reviewed - CodeBrief">The Top 10 Javascript MVC Frameworks Reviewed - CodeBrief</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://codebrief.com/2012/01/the-top-10-javascript-mvc-frameworks-reviewed/" target="_blank" rel="nofollow">http://codebrief.com/2012/01/the-top-10-javascript-mvc-frameworks-reviewed/</a></p>
+        <p><a href="http://codebrief.com" target="_blank" rel="nofollow">codebrief.com</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on July 19, 2012</p>
+        <div class="savesCount">
+                <a href="/url/5a1cde3e93ac1f524c973478de6106c8" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>629 <span>Saves</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+                    
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/javascript">javascript</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://codebrief.com/2012/01/the-top-10-javascript-mvc-frameworks-reviewed/">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://codebrief.com/2012/01/the-top-10-javascript-mvc-frameworks-reviewed/</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=The%20Top%2010%20Javascript%20MVC%20Frameworks%20Reviewed%20-%20CodeBrief&url=http%3A//codebrief.com/2012/01/the-top-10-javascript-mvc-frameworks-reviewed/&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//codebrief.com/2012/01/the-top-10-javascript-mvc-frameworks-reviewed/','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//codebrief.com/2012/01/the-top-10-javascript-mvc-frameworks-reviewed/','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//codebrief.com/2012/01/the-top-10-javascript-mvc-frameworks-reviewed/&title=The%20Top%2010%20Javascript%20MVC%20Frameworks%20Reviewed%20-%20CodeBrief','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//codebrief.com/2012/01/the-top-10-javascript-mvc-frameworks-reviewed/&title=The%20Top%2010%20Javascript%20MVC%20Frameworks%20Reviewed%20-%20CodeBrief','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=The%20Top%2010%20Javascript%20MVC%20Frameworks%20Reviewed%20-%20CodeBrief&body=http%3A//codebrief.com/2012/01/the-top-10-javascript-mvc-frameworks-reviewed/'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="3653628c816f5e71a299e1139b01485d" date="1342508067">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/3653628c816f5e71a299e1139b01485d" class="title" title="Microsoft Driver for Node.JS для SQL Server">Microsoft Driver for Node.JS для SQL Server</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://hpcru.wordpress.com/2012/06/10/%D0%B2%D1%8B%D1%85%D0%BE%D0%B4-microsoft-driver-for-node-js-%D0%B4%D0%BB%D1%8F-sql-server/" target="_blank" rel="nofollow">http://hpcru.wordpress.com/2012/06/10/%D0%B2%D1%8B%D1%85%D0%BE%D0%B4-micros...</a></p>
+        <p><a href="http://hpcru.wordpress.com" target="_blank" rel="nofollow">hpcru.wordpress.com</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on July 16, 2012</p>
+        <div class="savesCount">
+                <a href="/url/3653628c816f5e71a299e1139b01485d" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>1 <span>Save</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+                    
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/nodejs">nodejs</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/sqlserver">sqlserver</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://hpcru.wordpress.com/2012/06/10/%D0%B2%D1%8B%D1%85%D0%BE%D0%B4-microsoft-driver-for-node-js-%D0%B4%D0%BB%D1%8F-sql-server/">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://hpcru.wordpress.com/2012/06/10/%D0%B2%D1%8B%D1%85%D0%BE%D0%B4-microsoft-driver-for-node-js-%D0%B4%D0%BB%D1%8F-sql-server/</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=Microsoft%20Driver%20for%20Node.JS%20%D0%B4%D0%BB%D1%8F%20SQL%20Server&url=http%3A//hpcru.wordpress.com/2012/06/10/%25D0%25B2%25D1%258B%25D1%2585%25D0%25BE%25D0%25B4-microsoft-driver-for-node-js-%25D0%25B4%25D0%25BB%25D1%258F-sql-server/&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//hpcru.wordpress.com/2012/06/10/%25D0%25B2%25D1%258B%25D1%2585%25D0%25BE%25D0%25B4-microsoft-driver-for-node-js-%25D0%25B4%25D0%25BB%25D1%258F-sql-server/','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//hpcru.wordpress.com/2012/06/10/%25D0%25B2%25D1%258B%25D1%2585%25D0%25BE%25D0%25B4-microsoft-driver-for-node-js-%25D0%25B4%25D0%25BB%25D1%258F-sql-server/','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//hpcru.wordpress.com/2012/06/10/%25D0%25B2%25D1%258B%25D1%2585%25D0%25BE%25D0%25B4-microsoft-driver-for-node-js-%25D0%25B4%25D0%25BB%25D1%258F-sql-server/&title=Microsoft%20Driver%20for%20Node.JS%20%D0%B4%D0%BB%D1%8F%20SQL%20Server','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//hpcru.wordpress.com/2012/06/10/%25D0%25B2%25D1%258B%25D1%2585%25D0%25BE%25D0%25B4-microsoft-driver-for-node-js-%25D0%25B4%25D0%25BB%25D1%258F-sql-server/&title=Microsoft%20Driver%20for%20Node.JS%20%D0%B4%D0%BB%D1%8F%20SQL%20Server','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=Microsoft%20Driver%20for%20Node.JS%20%D0%B4%D0%BB%D1%8F%20SQL%20Server&body=http%3A//hpcru.wordpress.com/2012/06/10/%25D0%25B2%25D1%258B%25D1%2585%25D0%25BE%25D0%25B4-microsoft-driver-for-node-js-%25D0%25B4%25D0%25BB%25D1%258F-sql-server/'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="83db5f681ecf8d41ee6cedc9118eceb4" date="1342437008">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/83db5f681ecf8d41ee6cedc9118eceb4" class="title" title="Entity framework - How do I use structural annotations to set SQL type to Date in model first approach">Entity framework - How do I use structural annotations to set SQL type to Date i...</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://stackoverflow.com/questions/5912839/how-do-i-use-structural-annotations-to-set-sql-type-to-date-in-model-first-appro/5924143#5924143" target="_blank" rel="nofollow">http://stackoverflow.com/questions/5912839/how-do-i-use-structural-annotati...</a></p>
+        <p><a href="http://stackoverflow.com" target="_blank" rel="nofollow">stackoverflow.com</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on July 16, 2012</p>
+        <div class="savesCount">
+                <a href="/url/83db5f681ecf8d41ee6cedc9118eceb4" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>1 <span>Save</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+                    
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/Entity framework">Entity framework</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://stackoverflow.com/questions/5912839/how-do-i-use-structural-annotations-to-set-sql-type-to-date-in-model-first-appro/5924143#5924143">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://stackoverflow.com/questions/5912839/how-do-i-use-structural-annotations-to-set-sql-type-to-date-in-model-first-appro/5924143#5924143</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=Entity%20framework%20-%20How%20do%20I%20use%20structural%20annotations%20to%20set%20SQL%20type%20to%20Date%20in%20model%20first%20approach&url=http%3A//stackoverflow.com/questions/5912839/how-do-i-use-structural-annotations-to-set-sql-type-to-date-in-model-first-appro/5924143%235924143&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//stackoverflow.com/questions/5912839/how-do-i-use-structural-annotations-to-set-sql-type-to-date-in-model-first-appro/5924143%235924143','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//stackoverflow.com/questions/5912839/how-do-i-use-structural-annotations-to-set-sql-type-to-date-in-model-first-appro/5924143%235924143','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//stackoverflow.com/questions/5912839/how-do-i-use-structural-annotations-to-set-sql-type-to-date-in-model-first-appro/5924143%235924143&title=Entity%20framework%20-%20How%20do%20I%20use%20structural%20annotations%20to%20set%20SQL%20type%20to%20Date%20in%20model%20first%20approach','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//stackoverflow.com/questions/5912839/how-do-i-use-structural-annotations-to-set-sql-type-to-date-in-model-first-appro/5924143%235924143&title=Entity%20framework%20-%20How%20do%20I%20use%20structural%20annotations%20to%20set%20SQL%20type%20to%20Date%20in%20model%20first%20approach','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=Entity%20framework%20-%20How%20do%20I%20use%20structural%20annotations%20to%20set%20SQL%20type%20to%20Date%20in%20model%20first%20approach&body=http%3A//stackoverflow.com/questions/5912839/how-do-i-use-structural-annotations-to-set-sql-type-to-date-in-model-first-appro/5924143%235924143'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="8abed41e3b301b7e4ac703f280a32b3a" date="1342372898">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/8abed41e3b301b7e4ac703f280a32b3a" class="title" title="Mapping a Network Drive to WebDAV Share in Windows 7">Mapping a Network Drive to WebDAV Share in Windows 7</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://www.scotttyee.com/blog/2011/07/24/mapping-a-network-drive-to-webdav-share-in-windows-7/" target="_blank" rel="nofollow">http://www.scotttyee.com/blog/2011/07/24/mapping-a-network-drive-to-webdav-...</a></p>
+        <p><a href="http://www.scotttyee.com" target="_blank" rel="nofollow">www.scotttyee.com</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on July 15, 2012</p>
+        <div class="savesCount">
+                <a href="/url/8abed41e3b301b7e4ac703f280a32b3a" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>9 <span>Saves</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+                    
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/webdav">webdav</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/windows">windows</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/проблема-решение">проблема-решение</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://www.scotttyee.com/blog/2011/07/24/mapping-a-network-drive-to-webdav-share-in-windows-7/">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://www.scotttyee.com/blog/2011/07/24/mapping-a-network-drive-to-webdav-share-in-windows-7/</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=Mapping%20a%20Network%20Drive%20to%20WebDAV%20Share%20in%20Windows%207&url=http%3A//www.scotttyee.com/blog/2011/07/24/mapping-a-network-drive-to-webdav-share-in-windows-7/&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//www.scotttyee.com/blog/2011/07/24/mapping-a-network-drive-to-webdav-share-in-windows-7/','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//www.scotttyee.com/blog/2011/07/24/mapping-a-network-drive-to-webdav-share-in-windows-7/','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//www.scotttyee.com/blog/2011/07/24/mapping-a-network-drive-to-webdav-share-in-windows-7/&title=Mapping%20a%20Network%20Drive%20to%20WebDAV%20Share%20in%20Windows%207','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//www.scotttyee.com/blog/2011/07/24/mapping-a-network-drive-to-webdav-share-in-windows-7/&title=Mapping%20a%20Network%20Drive%20to%20WebDAV%20Share%20in%20Windows%207','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=Mapping%20a%20Network%20Drive%20to%20WebDAV%20Share%20in%20Windows%207&body=http%3A//www.scotttyee.com/blog/2011/07/24/mapping-a-network-drive-to-webdav-share-in-windows-7/'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="08fed17df718c1c5c4684aa0600d61be" date="1342365716">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/08fed17df718c1c5c4684aa0600d61be" class="title" title="Web Folders / Web disk / WebDAV problems on Windows 7 - TechieChips">Web Folders / Web disk / WebDAV problems on Windows 7 - TechieChips</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://www.techiechips.com/web-folders-web-disk-webdav-problems-on-windows-7/" target="_blank" rel="nofollow">http://www.techiechips.com/web-folders-web-disk-webdav-problems-on-windows-...</a></p>
+        <p><a href="http://www.techiechips.com" target="_blank" rel="nofollow">www.techiechips.com</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on July 15, 2012</p>
+        <div class="savesCount">
+                <a href="/url/08fed17df718c1c5c4684aa0600d61be" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>43 <span>Saves</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+                    
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/webdav">webdav</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/windows">windows</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/проблема-решение">проблема-решение</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://www.techiechips.com/web-folders-web-disk-webdav-problems-on-windows-7/">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://www.techiechips.com/web-folders-web-disk-webdav-problems-on-windows-7/</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=Web%20Folders%20/%20Web%20disk%20/%20WebDAV%20problems%20on%20Windows%207%20-%20TechieChips&url=http%3A//www.techiechips.com/web-folders-web-disk-webdav-problems-on-windows-7/&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//www.techiechips.com/web-folders-web-disk-webdav-problems-on-windows-7/','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//www.techiechips.com/web-folders-web-disk-webdav-problems-on-windows-7/','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//www.techiechips.com/web-folders-web-disk-webdav-problems-on-windows-7/&title=Web%20Folders%20/%20Web%20disk%20/%20WebDAV%20problems%20on%20Windows%207%20-%20TechieChips','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//www.techiechips.com/web-folders-web-disk-webdav-problems-on-windows-7/&title=Web%20Folders%20/%20Web%20disk%20/%20WebDAV%20problems%20on%20Windows%207%20-%20TechieChips','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=Web%20Folders%20/%20Web%20disk%20/%20WebDAV%20problems%20on%20Windows%207%20-%20TechieChips&body=http%3A//www.techiechips.com/web-folders-web-disk-webdav-problems-on-windows-7/'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                
+                
+                    
+                
+                
+                
+		
+                <ul class="pagination">    
+     
+        
+            
+        
+
+        
+        
+
+        
+
+        
+
+        
+          
+          <li><a href="/shmelev?&amp;page=42" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>   
+             
+
+          
+              
+                 <li><a href="/shmelev?&amp;page=1">1</a> </li>
+              
+          
+
+          
+            
+
+                
+                    <li><a href="/shmelev?&amp;page=41">41</a></li>
+                
+            
+          
+            
+
+                
+                    <li><a href="/shmelev?&amp;page=42">42</a></li>
+                
+            
+          
+            
+                <li class="active"><a href="#">43</a></li>
+            
+          
+            
+
+                
+                    <li><a href="/shmelev?&amp;page=44">44</a></li>
+                
+            
+          
+            
+
+                
+                    <li><a href="/shmelev?&amp;page=45">45</a></li>
+                
+            
+          
+
+          
+             
+                <li><a href="/shmelev?&amp;page=104">104</a></li>
+             
+          
+          
+          
+          <li><a href="/shmelev?&amp;page=44" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>   
+          
+          
+        
+</ul>
+		            
+</div>
+            <div class="contentRightPan">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--footer panel starts-->
+<div class="footer">
+    <div class="container">
+        <div class="footerLeft">
+            <ul>
+                <li><a href="https://del.icio.us">Home</a></li>
+                <li><a href="https://del.icio.us/about">About</a></li>
+                <li><a href="https://del.icio.us/apps">Apps</a></li>
+                <li><a href="http://blog.del.icio.us" target="_blank">Blog</a></li>
+                <li><a href="https://del.icio.us/branding">Branding</a></li>
+                <li><a href="https://del.icio.us/copyright">Copyright</a></li>
+                <li><a href="https://del.icio.us/help">Help</a></li>
+                <li><a href="https://del.icio.us/privacy">Privacy</a></li>
+                <li><a href="https://del.icio.us/rss">RSS</a></li>
+                <li><a href="https://del.icio.us/terms">Terms</a></li>
+                <li><a href="https://del.icio.us/tools">Tools</a></li>
+            </ul>
+        </div>
+        <div class="footerRight">
+          <p>&copy; 2017 Maciej Ceglowski</p>
+        </div>
+    </div>
+</div>
+<!--footer panel ends-->
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100970508); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100970508ns.gif" /></p></noscript>
+<div id="fb-root"></div>
+</body>
+</html>

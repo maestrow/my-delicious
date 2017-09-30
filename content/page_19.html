@@ -1,0 +1,1609 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-store, must-revalidate, no-cache, private, max-age=0, post-check=0, pre-check=0" />
+<meta http-equiv="X-Xss-Protection" content="0" />
+<meta name='apple-itunes-app' content='app-id=580295142'/>
+<meta name="viewport" content="width=device-width ,initial-scale=1.0">
+
+    <title>Delicious</title>
+
+
+<meta name="description" content="Keep, share, and discover the best of the Web using Delicious, the world&#039;s leading social bookmarking service." />
+
+
+
+<meta name="keywords" content="del.icio.us, delicious, bookmarks, bookmark, social bookmarking, links, link, stacks, stack" />
+
+
+
+<meta name="language" content="en" />
+<script type="text/javascript">
+    var D = {};
+</script>
+<link href="/img/fav-icon.png" rel="icon" />
+
+  <link rel="stylesheet" type="text/css" media="screen" href="https://del.icio.us/static/css/style.css?v=1339-36-gb002d" />
+
+
+<link href="https://del.icio.us/static/css/responsive-style.css?v=1339-36-gb002d" rel="stylesheet" type="text/css">
+<link href="https://del.icio.us/static/css/font-awesome.min.css?v=1339-36-gb002d" rel="stylesheet" type="text/css">
+<link href="https://del.icio.us/static/css/popcon.css?v=1339-36-gb002d" rel="stylesheet" type="text/css">
+<link href="https://del.icio.us/static/css/jquery.mCustomScrollbar.min.css?v=1339-36-gb002d" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="https://del.icio.us/static/js/jquery-1.11.3.min.js?v=1339-36-gb002d"></script>
+
+
+<script type="text/javascript" src="https://del.icio.us/static/js/jquery.mCustomScrollbar.concat.min.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/common.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/popcon.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/del_new.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/fblogin.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/gpluslogin.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/twtrlogin.js?v=1339-36-gb002d"></script>
+
+<script type="text/javascript">
+  var onloadCallback = function() {
+    grecaptcha.render('html_element', {
+      'sitekey' : '6Ld2XScTAAAAAOupdoiO6KRii_labn6piwMNVMZL',
+      'callback' : function(d_recaptcha_response) {	
+        $("#recaptcha-response").val(d_recaptcha_response);
+      }
+    });
+  };
+</script>
+</head>
+<body id="index">
+
+
+
+
+
+
+
+   
+<div id="delAlert" >
+    <div class="alertbg"></div>
+    <div class="alert">
+	    <div class="con">
+		    <div class="head"></div>
+		    <div class="msg"></div>
+		<div class="btns"></div>
+		<div class="clear"></div>
+	    </div>
+    </div>
+</div>
+<div id="loginRequired" class="hide">
+    <p class="memberLogin">Already a member? <a href="#userlogin" id="loginField" class="delPopcon" data-close-prev>Log in</a></p>
+    <div class="popInner">
+	<h3>Sign up with your...</h3>
+	<div class="socialMediaOuterWrapper">
+	    <a href="#" class="twtrlogin">
+		<div class="socialMediaBlock twitterBlock">
+		    <div class="socialIconPanel"><i class="fa fa-twitter"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Twitter</strong></p></div>
+		</div>
+	    </a>
+	    <a href="#" class="fblogin">
+		<div class="socialMediaBlock facebookBlock">
+		    <div class="socialIconPanel"><i class="fa fa-facebook"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Facebook</strong></p></div>
+		</div>
+	    </a>
+	    <a href="#" class="gpluslogin">
+		<div class="socialMediaBlock googleplusBlock">
+		    <div class="socialIconPanel"><i class="fa fa-google-plus"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Google+</strong></p></div>
+		</div>
+	    </a>
+	</div>
+	<div class="popupBottomCont">
+	    <p>or</p>
+	</div>
+	<p class="emailAddTxt"><a href="#usersignup" class="delPopcon" data-close-prev>Sign Up with your email address</a></p>
+    </div>
+</div>
+
+<div id="addTagPop" class="hide">
+    <div class="popInner">
+	<h3>Add Tags</h3>
+	<form name="frm_addTags" id="frm_addTags" action="" method="post" target="_top">
+	    <input type="hidden" name="url" id="url">
+	    <div class="signInFlds noBtmBdr saveLinkPop">
+		<label>Type tags to add</label>
+		<input type="text" name="tags" id="tags">
+		<div class="saveSocialLinks">		    
+		    <div class="saveRightBtns">
+			<button type="button" class="cancleBtn" onclick="javascript:popcon.close($('.popcon:eq(0)'));">Cancel</button>
+			<button type="submit" class="saveLinkBtn">Add Tags</button>
+		    </div>
+		</div>		
+	    </div>
+	</form>	
+    </div>
+</div>
+
+<div id="dupTagPop" class="hide">
+    <div class="popInner">
+	<h3>Duplicate Tags</h3>
+	<form name="frm_dupTags" id="frm_dupTags" action="" method="post" target="_top">
+	    <input type="hidden" name="url" id="url">
+	    <input type="hidden" name="tags" id="tags">
+	    <div class="signInFlds noBtmBdr saveLinkPop">
+		<label>Common tags to remove</label>
+		<div id="duptaghtml"></div>
+		<div class="saveSocialLinks">		    
+		    <div class="saveRightBtns">
+			<button type="button" class="cancleBtn" onclick="javascript:popcon.close($('.popcon:eq(0)'));">Cancel</button>
+			<button type="submit" class="saveLinkBtn">Remove Tags</button>
+		    </div>
+		</div>		
+	    </div>
+	</form>	
+    </div>
+</div>
+
+<div id="renTagPop" class="hide">
+    <div class="popInner">
+	<h3>Rename Tags</h3>
+	<form name="frm_renTags" id="frm_renTags" action="" method="post" target="_top">
+	    <input type="hidden" name="url" id="url">
+	    <input type="hidden" name="tags" id="tags">
+	    <div class="signInFlds noBtmBdr saveLinkPop">
+		<label>Select a tag to rename</label>
+		<select name="oldTag"></select>
+		<label>New tag name</label>
+		<input type="text" name="newTag">
+		<div class="saveSocialLinks">		    
+		    <div class="saveRightBtns">
+			<button type="button" class="cancleBtn" onclick="javascript:popcon.close($('.popcon:eq(0)'));">Cancel</button>
+			<button type="submit" class="saveLinkBtn">Rename Tag</button>
+		    </div>
+		</div>		
+	    </div>
+	</form>	
+    </div>
+</div>
+
+
+<div id="trendingSharePop" class="hide">
+    <div class="popInner">
+    <h3>Share This URL With Others!</h3>
+    <form name="frm_shareLink" id="frm_shareLink" action="" method="post" target="_top">
+	<input type="hidden" name="url" value="">              
+	<div class="signInFlds noBtmBdr saveLinkPop">
+	    <label><span class="youtubeIcon"></span><span id="url_lbl"></span></label>                  
+	    
+	    <label>Type Emails or User Names (comma-separated)</label>
+	    <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+	    
+	    <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+	    <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+	    
+	    <div class="saveSocialLinks">
+		<div class="saveRightBtns">                          
+		    <button type="submit" class="saveLinkBtn">Share</button>
+		</div>
+	    </div>
+	    <div class="bottomSocialIcons">
+		<ul>
+		  <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=#title#&url=#url#&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+		  <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=#url#','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+		  <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=#url#','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+		  <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=#url#&title=#title#','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+		  <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=#url#&title=#title#','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+		  <li class="email"><a href='mailto:?subject=#title#&body=#url#'><i class="fa fa-envelope"></i> Email</a></li>
+		</ul>
+	    </div>
+	</div>
+    </form>	
+  </div>    
+</div>
+
+<div id="savePop" class="hide">
+    <div class="popInner">
+	<h3>Save Link</h3>	
+	
+	<form name="frm_saveLink" id="frm_saveLink" action="" method="post">
+	    <input type="hidden" name="url" value="">
+	    <input type="hidden" name="replace" value="">	    
+	    
+	    <div class="signInFlds noBtmBdr saveLinkPop">
+		<label>Title</label>
+		<input type="text" name="title">
+		
+		<label>Tags <i class="fa fa-question-circle" title="Tags are an important part of organizing on Delicious. Using tags that are smart and simple benifits both you and the community. <ul><li>Lowercase tags are recommended: <code>webdev</code> instead of <code>WebDev</code></li><li>Spaces are allowed but not recommended: <code>machine-learning</code> instead of <code>Machine Learning</code></li><li>Reuse your tags and the tags of the community as much as possible.</li><li>Use ! at the start of a tag if it's unrelated to the link content: <code>!unread</code>, <code>!savedforlater</code>, etc.</li></ul>"></i><span> (Separated by comma)</span></label>
+		<input type="text" name="tags">
+		
+		<label>Comment <span>(Max. <span class="rem">1000</span> characters)</span></label>
+		<textarea name="note"></textarea>
+		
+		<div class="saveSocialLinks">
+		    <div class="saveLeftBtns">
+			<a href="#" class="privateBtn hide"><i class="fa fa-lock"></i>  Private</a>
+			<a href="#" class="publicBtn "><i class="fa fa-unlock"></i>  Public</a>			
+		    </div>
+		    <div class="saveRightBtns">
+			<button type="button" class="cancleBtn" onclick="javascript:popcon.close($('.popcon:eq(0)'));">Cancel</button>
+			<button type="submit" class="saveLinkBtn">Save Link</button>
+		    </div>
+		</div>
+		<input type="checkbox" name="private" class="hide">
+	    </div>
+	</form>	
+    </div>
+</div>
+
+<div id="userlogin" class="hide">
+    <div class="popInner">
+	<h3>Sign in</h3>
+	<div class="socialMediaOuterWrapper">
+	    <a href="#" class="twtrlogin">
+		<div class="socialMediaBlock twitterBlock">
+		    <div class="socialIconPanel"><i class="fa fa-twitter"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Twitter</strong></p></div>
+		</div>
+	    </a>
+	    <a href="#" class="fblogin">
+		<div class="socialMediaBlock facebookBlock">
+		    <div class="socialIconPanel"><i class="fa fa-facebook"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Facebook</strong></p></div>
+		</div>
+	    </a>
+	    <a href="#" class="gpluslogin">
+		<div class="socialMediaBlock googleplusBlock">
+		    <div class="socialIconPanel"><i class="fa fa-google-plus"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Google+</strong></p></div>
+		</div>
+	    </a>
+	</div>
+	<div class="popupBottomCont"><!----></div>
+	<form name="login-form" id="login-form" action="login" method="post">
+	<div class="signInFlds">
+	    <input type="text" placeholder="Username or Email" name="username" />
+	    <input type="password" placeholder="Password" name="password" />
+	    <div class="signBtnPan">
+		<button type="submit">Sign In</button>
+		<p><a href="#userforgotpassword" class="delPopcon" data-close-prev>Forgot password?</a></p>
+	    </div>
+	</div>
+	</form>
+	<p class="emailAddTxt"><a href="#usersignup" class="delPopcon" data-close-prev>Sign Up with your email address</a></p>
+    </div>
+</div> 
+
+<div id="usersignup" class="hide">
+    <div class="popInner">
+	<h3>Sign up</h3>	
+	<div class="popupBottomCont"></div>
+	<form name="signup-form" id="signup-form" action="register" method="post">
+	<div class="signInFlds noBtmBdr">
+	    <input type="text" placeholder="Full Name" name="display-name" />
+	    <input type="text" placeholder="Email" name="email" />
+	    <input type="text" placeholder="Username" name="username" />
+	    <input type="password" placeholder="Password" name="password" />	    
+            <input type="hidden" name="recaptcha_response_field" value="nocap"/>	    
+	    <div class="signupChekBox"><input type="checkbox" name="option_terms" id="option_terms" checked><label for="optin">Stay in the loop with Delicious Trending</label></div>
+	    <div class="labelTerms">By clicking the button, you agree to the <a href="/terms" target="_blank">Terms & Conditions</a>.</div>
+	    <div class="signBtnPan">
+		<button type="submit">Sign Up</button>
+	    </div>
+	</div>
+	</form>	
+    </div>
+</div>
+
+<div id="userforgotpassword" class="hide">
+    <div class="popInner">
+	<h3>Forgot Password?</h3>	
+	<div class="popupBottomCont"></div>
+	<p>Please enter your username below and press the send button.</br>A password reset link will be sent to you.</p>
+	<p>If you are unable to access the email address originally associated with your Delicious account, we recommend creating a new account.</p>
+	<form name="forgot-password-form" id="forgot-password-form" action="" method="post">
+	<div class="signInFlds noBtmBdr">	    
+	    <input type="text" name="username_or_email" id="usernameEmail" placeholder="Enter Username or Email" />
+	    <div class="signBtnPan">
+		<button type="submit">Send</button>
+	    </div>
+	</div>
+	</form>	
+    </div>
+</div>
+<!--header starts-->
+<div class="header">
+    <div class="container">
+	<div class="logo">
+	    <a href="https://del.icio.us" target="_top">Delicious</a>
+	</div>
+	<div class="navPanel">
+	    <ul>
+		    <li class="toplink"><i class="fa fa-sign-in"></i> <a href="https://del.icio.us/login" class="" target="_top">Sign In</a></li>
+		    <li class="signupBtn"><a href="https://del.icio.us/join" target="_top">Sign Up</a></li></ul>
+	</div>
+	<div class="headerSearchPan">
+            	<div class="searchPanel">
+		    <form id="global-searchform" action="https://del.icio.us/search" method="get" target="_top">
+                    <input autocomplete="off" name="p" id="global-searchinput" class="searchInput" placeholder="Search shmelev's links" type="text"/>
+		    
+			<input type="hidden" name="user" value="shmelev">
+		    
+		    <button type="submit">Search</button>
+		    </form>
+            	</div>
+            </div>
+	<div class="navPanSmallScrn">
+	    <ul>
+		<li class="searchBtn"><a href="#"><i class="fa fa-search"></i></a></li>
+		<li class="colaspeMenu"><a href="#"><i class="fa fa-bars"></i></a></li>
+	    </ul>
+	</div>
+	<div class="smallScrnSrch">
+	    <div class="searchPanel">
+		<form id="global-searchform" action="https://del.icio.us/search" method="get" target="_top">
+		<input autocomplete="off" name="p" id="global-searchinput" class="searchInput" placeholder="Search shmelev's links" type="text"/>
+		
+		    <input type="hidden" name="user" value="shmelev">
+		
+		<button type="submit">Search</button>
+		</form>
+	    </div>
+	</div>
+	<div class="smallScrnMenu">
+	    <ul>
+		    <li><a href="https://del.icio.us/login" class="" target="_top"><i class="fa fa-sign-in"></i> Sign In</a></li>
+		    <li class="toplink"><a href="https://shop.icio.us" target="_blank"><i class="fa fa-shopping-cart"></i> Shop</a></li>
+		    <li class="signupBtn"><a href="https://del.icio.us/join" target="_top">Sign Up</a></li></ul>
+	</div>
+	<div class="clear"><!----></div>	
+    </div>
+</div>
+
+<div class="saveDialog" id="saveDialog0">
+  <div class="saveBody"></div>
+  <div class="clear"></div>
+</div>
+
+<!--header ends-->
+
+<!--top ad starts-->
+<!--top ad ends-->
+<div class="breadcrumb">
+    <div class="container">
+        <div class="breadcrumbPanel">
+            <div class="container">
+                <ul class="breadcrumb">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/shmelev">User</a></li>
+                    <li><a href="/shmelev">shmelev</a></li>
+                    
+                        <li><a href="#">Page 19</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="profileContent userHomeContent">
+    <div class="container">
+        <div class="contentPanel">
+            <div class="profileLeftPan">
+                		    
+                    <div class="profileDetails">
+			
+			
+			    
+				<a rel="nofollow" class="followBtn" href="https://del.icio.us/settings/networkedit?action=add&username=shmelev&jump=/shmelev">Follow</a>
+			    
+			
+                        <div class="profileBrief">
+			    <div class="profileHeading">
+				<h2>Username: shmelev</h2>
+				
+				<h3>Name: Andrew Shmelev</h3>
+				
+				<h4>Joined: 30 Aug 2010 </h4>
+				<div class="tabMenu">
+	<li class="colaspeTabMenu"><a href="#"><i class="fa fa-bars"></i></a></li>
+	<ul>
+	    
+	    <li  class="active" ><a href="/shmelev/">shmelev</a></li>
+	    <li ><a href="/feed/shmelev">Feed</a></li>
+	    
+	    <li ><a href="/following/shmelev">Following</a></li>
+	    <li ><a href="/followers/shmelev">Followers</a></li>
+	</ul>
+    </div>
+			    </div>
+			    <div class="pulsIcon profileInfoIcon">
+                            	<span><i class="fa fa-plus"></i> Profile Info</span>
+                            </div>
+			    <div class="profileInfo">
+								
+				<div class="profileLinks">
+				    
+				    <p>Following:<a href="https://del.icio.us/following/shmelev">
+					
+					  0 Users
+					</a>
+				    </p>
+				    
+				    
+				    
+					
+					<p><a href="https://del.icio.us/shmelev">1034 Links</a></p>
+					
+				    
+				    
+				</div>
+			    </div>
+                        </div>
+                    </div>                    
+        
+                
+    
+    
+    
+    <div class="pulsIcon tagsPanelIcon">
+        <span><i class="fa fa-plus"></i> Tags</span>
+    </div>
+    <div class="tagsPanel">
+        <h3>Tags</h3>
+        <span class="viewAll"><a href="http://del.icio.us/shmelev/tags">View All</a></span>
+        <div class="scroll_300 mCustomScrollbar light" data-mcs-theme="minimal-dark">
+            <div class="tags shuffleFontSize">	    
+                
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/javascript">javascript</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/.net">.net</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/nodejs">nodejs</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/semantic">semantic</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/C#">C#</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/extjs">extjs</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/книги">книги</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/tools">tools</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/ремонт">ремонт</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/покупки">покупки</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/android">android</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/F#">F#</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/игры">игры</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/музыка">музыка</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/linq">linq</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/что_я_пою">что_я_пою</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/москва">москва</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/интернет-сервисы">интернет-сервисы</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/asp.net">asp.net</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/психология">психология</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/блоги">блоги</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/css">css</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/гитара">гитара</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/tutorial">tutorial</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/порталы">порталы</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/debugging">debugging</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/programming_game">programming_game</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/туризм">туризм</a>
+                  
+                    
+                
+                    
+                        
+    <a href="http://del.icio.us/shmelev/asp.net_mvc">asp.net_mvc</a>
+                  
+                    
+                
+                <p><a href="http://del.icio.us/shmelev/tags">View All</a></p>
+            </div>
+        </div>
+    </div>
+    
+
+            </div>
+            <div class="profileMidpanel">
+                <div class="tabMenu">
+	<li class="colaspeTabMenu"><a href="#"><i class="fa fa-bars"></i></a></li>
+	<ul>
+	    
+	    <li  class="active" ><a href="/shmelev/">shmelev</a></li>
+	    <li ><a href="/feed/shmelev">Feed</a></li>
+	    
+	    <li ><a href="/following/shmelev">Following</a></li>
+	    <li ><a href="/followers/shmelev">Followers</a></li>
+	</ul>
+    </div>
+                <div class="userPageFilter">
+	<ul id="linkViewOptions" class="right dropdown">
+	    <li class="default dropdown">
+		 <span class="arrow"></span>
+		 <ul class="glowShadow expanding">
+		     <li class="element ">
+			 <span><a href="?link_view=compact">Compact View</a></span>
+		     </li>
+		     <li class="element  selected ">
+			 <span><a href="?link_view=normal">Normal View</a></span>
+		     </li>
+		     <li class="element ">
+			 <span><a href="?link_view=expanded">Expanded View</a></span>
+		     </li>
+		 </ul>
+	    </li>
+	</ul>
+    </div>
+                <div class="tabSubMenu" id="bulkEditActions">
+                    
+                </div>
+                <div class="tagsFilter">
+	<div class="searchPanel tagsSeacrhPanel">
+	    <form id="global-searchform" name="magicboxform" action="" method="get">
+	    <input name="tagtype" id="addtagType" value="tag" type="hidden">
+	    <input autocomplete="off" name="addtag" id="global-searchinput" class="searchInput" placeholder="Add a tag filter" type="text">
+		<button type="submit" class="searchTagBtn"><i class="fa fa-search" aria-hidden="true"></i> <span>Search by Tag</span></button>
+	    </form>
+	</div>
+    </div>
+                
+                    <h1>Links <span>181</span> through <span>190</span> of <span>1034</span> Andrew Shmelev's Bookmarks</h1>
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="b536ea9368087af70dca8d5adef6c0a1" date="1396946740">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/b536ea9368087af70dca8d5adef6c0a1" class="title" title="Command Line Utilities with Node.js | Shape Shed">Command Line Utilities with Node.js | Shape Shed</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://shapeshed.com/command-line-utilities-with-nodejs/" target="_blank" rel="nofollow">http://shapeshed.com/command-line-utilities-with-nodejs/</a></p>
+        <p><a href="http://shapeshed.com" target="_blank" rel="nofollow">shapeshed.com</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on April 08, 2014</p>
+        <div class="savesCount">
+                <a href="/url/b536ea9368087af70dca8d5adef6c0a1" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>22 <span>Saves</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+          <p><p>also: https://github.com/gagle/node-argp, https://github.com/harthur/nomnom</p></p>          
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/nodejs">nodejs</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/console">console</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/commandline">commandline</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/cli">cli</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://shapeshed.com/command-line-utilities-with-nodejs/">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://shapeshed.com/command-line-utilities-with-nodejs/</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=Command%20Line%20Utilities%20with%20Node.js%20%7C%20Shape%20Shed&url=http%3A//shapeshed.com/command-line-utilities-with-nodejs/&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//shapeshed.com/command-line-utilities-with-nodejs/','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//shapeshed.com/command-line-utilities-with-nodejs/','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//shapeshed.com/command-line-utilities-with-nodejs/&title=Command%20Line%20Utilities%20with%20Node.js%20%7C%20Shape%20Shed','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//shapeshed.com/command-line-utilities-with-nodejs/&title=Command%20Line%20Utilities%20with%20Node.js%20%7C%20Shape%20Shed','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=Command%20Line%20Utilities%20with%20Node.js%20%7C%20Shape%20Shed&body=http%3A//shapeshed.com/command-line-utilities-with-nodejs/'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="f227bb58574576feb7289e6a2e7f18e3" date="1396869916">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/f227bb58574576feb7289e6a2e7f18e3" class="title" title="Полиглот. Выучим английский за 16 часов! / Cмотреть все выпуски онлайн / tvkultura.ru">Полиглот. Выучим английский за 16 часов! / Cмотреть все выпуски онлайн / tvkultu...</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://tvkultura.ru/brand/show/brand_id/14505" target="_blank" rel="nofollow">http://tvkultura.ru/brand/show/brand_id/14505</a></p>
+        <p><a href="http://tvkultura.ru" target="_blank" rel="nofollow">tvkultura.ru</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on April 07, 2014</p>
+        <div class="savesCount">
+                <a href="/url/f227bb58574576feb7289e6a2e7f18e3" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>2 <span>Saves</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+                    
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/английский">английский</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/видео">видео</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://tvkultura.ru/brand/show/brand_id/14505">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://tvkultura.ru/brand/show/brand_id/14505</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=%D0%9F%D0%BE%D0%BB%D0%B8%D0%B3%D0%BB%D0%BE%D1%82.%20%D0%92%D1%8B%D1%83%D1%87%D0%B8%D0%BC%20%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B7%D0%B0%2016%20%D1%87%D0%B0%D1%81%D0%BE%D0%B2%21%20/%20C%D0%BC%D0%BE%D1%82%D1%80%D0%B5%D1%82%D1%8C%20%D0%B2%D1%81%D0%B5%20%D0%B2%D1%8B%D0%BF%D1%83%D1%81%D0%BA%D0%B8%20%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD%20/%20tvkultura.ru&url=http%3A//tvkultura.ru/brand/show/brand_id/14505&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//tvkultura.ru/brand/show/brand_id/14505','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//tvkultura.ru/brand/show/brand_id/14505','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//tvkultura.ru/brand/show/brand_id/14505&title=%D0%9F%D0%BE%D0%BB%D0%B8%D0%B3%D0%BB%D0%BE%D1%82.%20%D0%92%D1%8B%D1%83%D1%87%D0%B8%D0%BC%20%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B7%D0%B0%2016%20%D1%87%D0%B0%D1%81%D0%BE%D0%B2%21%20/%20C%D0%BC%D0%BE%D1%82%D1%80%D0%B5%D1%82%D1%8C%20%D0%B2%D1%81%D0%B5%20%D0%B2%D1%8B%D0%BF%D1%83%D1%81%D0%BA%D0%B8%20%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD%20/%20tvkultura.ru','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//tvkultura.ru/brand/show/brand_id/14505&title=%D0%9F%D0%BE%D0%BB%D0%B8%D0%B3%D0%BB%D0%BE%D1%82.%20%D0%92%D1%8B%D1%83%D1%87%D0%B8%D0%BC%20%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B7%D0%B0%2016%20%D1%87%D0%B0%D1%81%D0%BE%D0%B2%21%20/%20C%D0%BC%D0%BE%D1%82%D1%80%D0%B5%D1%82%D1%8C%20%D0%B2%D1%81%D0%B5%20%D0%B2%D1%8B%D0%BF%D1%83%D1%81%D0%BA%D0%B8%20%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD%20/%20tvkultura.ru','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=%D0%9F%D0%BE%D0%BB%D0%B8%D0%B3%D0%BB%D0%BE%D1%82.%20%D0%92%D1%8B%D1%83%D1%87%D0%B8%D0%BC%20%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B7%D0%B0%2016%20%D1%87%D0%B0%D1%81%D0%BE%D0%B2%21%20/%20C%D0%BC%D0%BE%D1%82%D1%80%D0%B5%D1%82%D1%8C%20%D0%B2%D1%81%D0%B5%20%D0%B2%D1%8B%D0%BF%D1%83%D1%81%D0%BA%D0%B8%20%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD%20/%20tvkultura.ru&body=http%3A//tvkultura.ru/brand/show/brand_id/14505'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="f3317f86260a2b5b9b03bf4d84bb0e3b" date="1396013766">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/f3317f86260a2b5b9b03bf4d84bb0e3b" class="title" title="Apache Lucene.Net">Apache Lucene.Net</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://lucenenet.apache.org/" target="_blank" rel="nofollow">http://lucenenet.apache.org/</a></p>
+        <p><a href="http://lucenenet.apache.org" target="_blank" rel="nofollow">lucenenet.apache.org</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on March 28, 2014</p>
+        <div class="savesCount">
+                <a href="/url/f3317f86260a2b5b9b03bf4d84bb0e3b" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>6 <span>Saves</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+          <p><p>Библиотека для полнотекстового поиска</p></p>          
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/search">search</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://lucenenet.apache.org/">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://lucenenet.apache.org/</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=Apache%20Lucene.Net&url=http%3A//lucenenet.apache.org/&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//lucenenet.apache.org/','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//lucenenet.apache.org/','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//lucenenet.apache.org/&title=Apache%20Lucene.Net','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//lucenenet.apache.org/&title=Apache%20Lucene.Net','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=Apache%20Lucene.Net&body=http%3A//lucenenet.apache.org/'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="620e8045b4d78c77449274b136c8ab05" date="1396013545">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/620e8045b4d78c77449274b136c8ab05" class="title" title="Home - arachnode.net">Home - arachnode.net</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://arachnode.net/" target="_blank" rel="nofollow">http://arachnode.net/</a></p>
+        <p><a href="http://arachnode.net" target="_blank" rel="nofollow">arachnode.net</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on March 28, 2014</p>
+        <div class="savesCount">
+                <a href="/url/620e8045b4d78c77449274b136c8ab05" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>3 <span>Saves</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+                    
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/crawler">crawler</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/web scrapping">web scrapping</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/webcrawler">webcrawler</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://arachnode.net/">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://arachnode.net/</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=Home%20-%20arachnode.net&url=http%3A//arachnode.net/&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//arachnode.net/','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//arachnode.net/','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//arachnode.net/&title=Home%20-%20arachnode.net','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//arachnode.net/&title=Home%20-%20arachnode.net','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=Home%20-%20arachnode.net&body=http%3A//arachnode.net/'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="a3921f7ceb75f27734fb795d8fe7d629" date="1396005344">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/a3921f7ceb75f27734fb795d8fe7d629" class="title" title="Scrapy | An open source web scraping framework for Python">Scrapy | An open source web scraping framework for Python</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://scrapy.org/" target="_blank" rel="nofollow">http://scrapy.org/</a></p>
+        <p><a href="http://scrapy.org" target="_blank" rel="nofollow">scrapy.org</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on March 28, 2014</p>
+        <div class="savesCount">
+                <a href="/url/a3921f7ceb75f27734fb795d8fe7d629" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>125 <span>Saves</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+                    
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/scraper">scraper</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/parser">parser</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/crawler">crawler</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/data mining">data mining</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://scrapy.org/">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://scrapy.org/</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=Scrapy%20%7C%20An%20open%20source%20web%20scraping%20framework%20for%20Python&url=http%3A//scrapy.org/&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//scrapy.org/','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//scrapy.org/','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//scrapy.org/&title=Scrapy%20%7C%20An%20open%20source%20web%20scraping%20framework%20for%20Python','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//scrapy.org/&title=Scrapy%20%7C%20An%20open%20source%20web%20scraping%20framework%20for%20Python','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=Scrapy%20%7C%20An%20open%20source%20web%20scraping%20framework%20for%20Python&body=http%3A//scrapy.org/'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="73faeb131d3ec4e62b03ad305be498ba" date="1395829596">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/73faeb131d3ec4e62b03ad305be498ba" class="title" title="Macros for Build Commands and Properties">Macros for Build Commands and Properties</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://msdn.microsoft.com/en-us/library/c02as0cs.aspx" target="_blank" rel="nofollow">http://msdn.microsoft.com/en-us/library/c02as0cs.aspx</a></p>
+        <p><a href="http://msdn.microsoft.com" target="_blank" rel="nofollow">msdn.microsoft.com</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on March 26, 2014</p>
+        <div class="savesCount">
+                <a href="/url/73faeb131d3ec4e62b03ad305be498ba" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>47 <span>Saves</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+                    
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/Visual Studio">Visual Studio</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://msdn.microsoft.com/en-us/library/c02as0cs.aspx">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://msdn.microsoft.com/en-us/library/c02as0cs.aspx</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=Macros%20for%20Build%20Commands%20and%20Properties&url=http%3A//msdn.microsoft.com/en-us/library/c02as0cs.aspx&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//msdn.microsoft.com/en-us/library/c02as0cs.aspx','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//msdn.microsoft.com/en-us/library/c02as0cs.aspx','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//msdn.microsoft.com/en-us/library/c02as0cs.aspx&title=Macros%20for%20Build%20Commands%20and%20Properties','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//msdn.microsoft.com/en-us/library/c02as0cs.aspx&title=Macros%20for%20Build%20Commands%20and%20Properties','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=Macros%20for%20Build%20Commands%20and%20Properties&body=http%3A//msdn.microsoft.com/en-us/library/c02as0cs.aspx'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="19026db0006c0ff16b345f15c28d5b71" date="1395741091">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/19026db0006c0ff16b345f15c28d5b71" class="title" title="&#34;Здравствуйте, вообще-то я - Бог...&#34;. Обсуждение на LiveInternet - Российский Сервис Онлайн-Дневников">&#34;Здравствуйте, вообще-то я - Бог...&#34;. Обсуждение на LiveInternet - Российский Се...</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://www.liveinternet.ru/users/1364755/post66727656" target="_blank" rel="nofollow">http://www.liveinternet.ru/users/1364755/post66727656</a></p>
+        <p><a href="http://www.liveinternet.ru" target="_blank" rel="nofollow">www.liveinternet.ru</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on March 25, 2014</p>
+        <div class="savesCount">
+                <a href="/url/19026db0006c0ff16b345f15c28d5b71" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>1 <span>Save</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+          <p><p>Кстати, помните, в требованиях к кандидату на вакансию был телевизор? Знаете зачем? Ни за что не угадаете :)))) Я должна была слушать новости по телевизору, набирать звучавший текст на клавиатуре, а потом сливать это на портал. Весело правда?</p></p>          
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/бодхи">бодхи</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/секты">секты</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://www.liveinternet.ru/users/1364755/post66727656">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://www.liveinternet.ru/users/1364755/post66727656</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=%22%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%B2%D0%BE%D0%BE%D0%B1%D1%89%D0%B5-%D1%82%D0%BE%20%D1%8F%20-%20%D0%91%D0%BE%D0%B3...%22.%20%D0%9E%D0%B1%D1%81%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%20LiveInternet%20-%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9E%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD-%D0%94%D0%BD%D0%B5%D0%B2%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2&url=http%3A//www.liveinternet.ru/users/1364755/post66727656&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//www.liveinternet.ru/users/1364755/post66727656','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//www.liveinternet.ru/users/1364755/post66727656','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//www.liveinternet.ru/users/1364755/post66727656&title=%22%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%B2%D0%BE%D0%BE%D0%B1%D1%89%D0%B5-%D1%82%D0%BE%20%D1%8F%20-%20%D0%91%D0%BE%D0%B3...%22.%20%D0%9E%D0%B1%D1%81%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%20LiveInternet%20-%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9E%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD-%D0%94%D0%BD%D0%B5%D0%B2%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//www.liveinternet.ru/users/1364755/post66727656&title=%22%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%B2%D0%BE%D0%BE%D0%B1%D1%89%D0%B5-%D1%82%D0%BE%20%D1%8F%20-%20%D0%91%D0%BE%D0%B3...%22.%20%D0%9E%D0%B1%D1%81%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%20LiveInternet%20-%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9E%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD-%D0%94%D0%BD%D0%B5%D0%B2%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=%22%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%B2%D0%BE%D0%BE%D0%B1%D1%89%D0%B5-%D1%82%D0%BE%20%D1%8F%20-%20%D0%91%D0%BE%D0%B3...%22.%20%D0%9E%D0%B1%D1%81%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%20LiveInternet%20-%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9E%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD-%D0%94%D0%BD%D0%B5%D0%B2%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2&body=http%3A//www.liveinternet.ru/users/1364755/post66727656'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="b6bd18e0f1e25c76dbd74cc857aeea1b" date="1395322864">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/b6bd18e0f1e25c76dbd74cc857aeea1b" class="title" title="Telescope captures view of gravitational waves : Nature News &amp; Comment">Telescope captures view of gravitational waves : Nature News &amp; Comment</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://www.nature.com/news/telescope-captures-view-of-gravitational-waves-1.14876#/related-links" target="_blank" rel="nofollow">http://www.nature.com/news/telescope-captures-view-of-gravitational-waves-1...</a></p>
+        <p><a href="http://www.nature.com" target="_blank" rel="nofollow">www.nature.com</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on March 20, 2014</p>
+        <div class="savesCount">
+                <a href="/url/b6bd18e0f1e25c76dbd74cc857aeea1b" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>4 <span>Saves</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+                    
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/наука">наука</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/физика">физика</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/космос">космос</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/новости">новости</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://www.nature.com/news/telescope-captures-view-of-gravitational-waves-1.14876#/related-links">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://www.nature.com/news/telescope-captures-view-of-gravitational-waves-1.14876#/related-links</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=Telescope%20captures%20view%20of%20gravitational%20waves%20%3A%20Nature%20News%20%26%20Comment&url=http%3A//www.nature.com/news/telescope-captures-view-of-gravitational-waves-1.14876%23/related-links&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//www.nature.com/news/telescope-captures-view-of-gravitational-waves-1.14876%23/related-links','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//www.nature.com/news/telescope-captures-view-of-gravitational-waves-1.14876%23/related-links','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//www.nature.com/news/telescope-captures-view-of-gravitational-waves-1.14876%23/related-links&title=Telescope%20captures%20view%20of%20gravitational%20waves%20%3A%20Nature%20News%20%26%20Comment','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//www.nature.com/news/telescope-captures-view-of-gravitational-waves-1.14876%23/related-links&title=Telescope%20captures%20view%20of%20gravitational%20waves%20%3A%20Nature%20News%20%26%20Comment','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=Telescope%20captures%20view%20of%20gravitational%20waves%20%3A%20Nature%20News%20%26%20Comment&body=http%3A//www.nature.com/news/telescope-captures-view-of-gravitational-waves-1.14876%23/related-links'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="1a52007c1a2d15a49711bd7e1ed2d6d0" date="1395147163">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/1a52007c1a2d15a49711bd7e1ed2d6d0" class="title" title="Офис компании Boomburum / Хабрахабр">Офис компании Boomburum / Хабрахабр</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://habrahabr.ru/post/91646/" target="_blank" rel="nofollow">http://habrahabr.ru/post/91646/</a></p>
+        <p><a href="http://habrahabr.ru" target="_blank" rel="nofollow">habrahabr.ru</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on March 18, 2014</p>
+        <div class="savesCount">
+                <a href="/url/1a52007c1a2d15a49711bd7e1ed2d6d0" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>3 <span>Saves</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+                    
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/балкон">балкон</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/ремонт">ремонт</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://habrahabr.ru/post/91646/">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://habrahabr.ru/post/91646/</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=%D0%9E%D1%84%D0%B8%D1%81%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8%20Boomburum%20/%20%D0%A5%D0%B0%D0%B1%D1%80%D0%B0%D1%85%D0%B0%D0%B1%D1%80&url=http%3A//habrahabr.ru/post/91646/&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//habrahabr.ru/post/91646/','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//habrahabr.ru/post/91646/','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//habrahabr.ru/post/91646/&title=%D0%9E%D1%84%D0%B8%D1%81%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8%20Boomburum%20/%20%D0%A5%D0%B0%D0%B1%D1%80%D0%B0%D1%85%D0%B0%D0%B1%D1%80','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//habrahabr.ru/post/91646/&title=%D0%9E%D1%84%D0%B8%D1%81%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8%20Boomburum%20/%20%D0%A5%D0%B0%D0%B1%D1%80%D0%B0%D1%85%D0%B0%D0%B1%D1%80','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=%D0%9E%D1%84%D0%B8%D1%81%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8%20Boomburum%20/%20%D0%A5%D0%B0%D0%B1%D1%80%D0%B0%D1%85%D0%B0%D0%B1%D1%80&body=http%3A//habrahabr.ru/post/91646/'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                        
+                            
+                        
+                        
+  <div class="articleThumbBlockOuter" md5="ed4d2200691ee52bb79db9c8f38b9aa5" date="1395143191">    
+    <div class="articleThumbBlock ">
+      <div class="articleTitlePan">
+        
+        <h3><a href="/url/ed4d2200691ee52bb79db9c8f38b9aa5" class="title" title="Прекратите скручивать! / Хабрахабр">Прекратите скручивать! / Хабрахабр</a></h3>
+      </div>
+      <div class="articleInfoPan">
+        <p><a href="http://habrahabr.ru/post/157947/" target="_blank" rel="nofollow">http://habrahabr.ru/post/157947/</a></p>
+        <p><a href="http://habrahabr.ru" target="_blank" rel="nofollow">habrahabr.ru</a></p>
+        <p>This link recently saved by <a href="/shmelev">shmelev</a> on March 18, 2014</p>
+        <div class="savesCount">
+                <a href="/url/ed4d2200691ee52bb79db9c8f38b9aa5" target="_blank"><img src="/static/img/logo.png" /></a>
+            <p>3 <span>Saves</span></p>
+        </div>
+      </div>
+      <div class="thumbTBriefTxt">
+          <p><p>32А</p></p>          
+          <ul class="tagName">
+    
+        
+    <li><a href="http://del.icio.us/shmelev/электрика">электрика</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/провода">провода</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/клеммы">клеммы</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/зажимы">зажимы</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/Соединения">Соединения</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/diy">diy</a></li>
+  
+    
+        
+    <li><a href="http://del.icio.us/shmelev/ремонт">ремонт</a></li>
+  
+    
+    </ul>
+      </div>
+    </div>
+    <div class="sharePanel actions">
+      <div class="sharePopup">
+        <div class="popInner popTopPadd">
+          <h3>Share It With Others!</h3>			    
+          <form name="frm_shareLink" id="frm_shareLink" action="" method="post">
+              <input type="hidden" name="url" value="http://habrahabr.ru/post/157947/">              
+              <div class="signInFlds noBtmBdr saveLinkPop">
+                  <label><span class="youtubeIcon"></span>http://habrahabr.ru/post/157947/</label>                  
+                  
+                  <label>Type Emails or User Names (comma-separated)</label>
+                  <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+                  
+                  <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+                  <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+                  
+                  <div class="saveSocialLinks">
+                      <div class="saveRightBtns">                          
+                          <button type="submit" class="saveLinkBtn">Share</button>
+                      </div>
+                  </div>
+                  <div class="bottomSocialIcons">
+                    <ul>
+                      <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=%D0%9F%D1%80%D0%B5%D0%BA%D1%80%D0%B0%D1%82%D0%B8%D1%82%D0%B5%20%D1%81%D0%BA%D1%80%D1%83%D1%87%D0%B8%D0%B2%D0%B0%D1%82%D1%8C%21%20/%20%D0%A5%D0%B0%D0%B1%D1%80%D0%B0%D1%85%D0%B0%D0%B1%D1%80&url=http%3A//habrahabr.ru/post/157947/&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                      <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=http%3A//habrahabr.ru/post/157947/','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                      <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=http%3A//habrahabr.ru/post/157947/','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+                      <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=http%3A//habrahabr.ru/post/157947/&title=%D0%9F%D1%80%D0%B5%D0%BA%D1%80%D0%B0%D1%82%D0%B8%D1%82%D0%B5%20%D1%81%D0%BA%D1%80%D1%83%D1%87%D0%B8%D0%B2%D0%B0%D1%82%D1%8C%21%20/%20%D0%A5%D0%B0%D0%B1%D1%80%D0%B0%D1%85%D0%B0%D0%B1%D1%80','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+                      <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=http%3A//habrahabr.ru/post/157947/&title=%D0%9F%D1%80%D0%B5%D0%BA%D1%80%D0%B0%D1%82%D0%B8%D1%82%D0%B5%20%D1%81%D0%BA%D1%80%D1%83%D1%87%D0%B8%D0%B2%D0%B0%D1%82%D1%8C%21%20/%20%D0%A5%D0%B0%D0%B1%D1%80%D0%B0%D1%85%D0%B0%D0%B1%D1%80','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+                      <li class="email"><a href='mailto:?subject=%D0%9F%D1%80%D0%B5%D0%BA%D1%80%D0%B0%D1%82%D0%B8%D1%82%D0%B5%20%D1%81%D0%BA%D1%80%D1%83%D1%87%D0%B8%D0%B2%D0%B0%D1%82%D1%8C%21%20/%20%D0%A5%D0%B0%D0%B1%D1%80%D0%B0%D1%85%D0%B0%D0%B1%D1%80&body=http%3A//habrahabr.ru/post/157947/'><i class="fa fa-envelope"></i> Email</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </form>	
+        </div>        
+      </div>
+      <ul>
+        
+        
+        <li><a class="action share shareBookmark" shareLink="true" href="#" onclick="return false;"><i class="fa fa-share-alt-square"></i> Share Bookmark</a></li>
+      </ul>
+    </div>
+  </div>  
+
+                    
+                
+                
+                    
+                
+                
+                
+		
+                <ul class="pagination">    
+     
+        
+            
+        
+
+        
+        
+
+        
+
+        
+
+        
+          
+          <li><a href="/shmelev?&amp;page=18" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>   
+             
+
+          
+              
+                 <li><a href="/shmelev?&amp;page=1">1</a> </li>
+              
+          
+
+          
+            
+
+                
+                    <li><a href="/shmelev?&amp;page=17">17</a></li>
+                
+            
+          
+            
+
+                
+                    <li><a href="/shmelev?&amp;page=18">18</a></li>
+                
+            
+          
+            
+                <li class="active"><a href="#">19</a></li>
+            
+          
+            
+
+                
+                    <li><a href="/shmelev?&amp;page=20">20</a></li>
+                
+            
+          
+            
+
+                
+                    <li><a href="/shmelev?&amp;page=21">21</a></li>
+                
+            
+          
+
+          
+             
+                <li><a href="/shmelev?&amp;page=104">104</a></li>
+             
+          
+          
+          
+          <li><a href="/shmelev?&amp;page=20" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>   
+          
+          
+        
+</ul>
+		            
+</div>
+            <div class="contentRightPan">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--footer panel starts-->
+<div class="footer">
+    <div class="container">
+        <div class="footerLeft">
+            <ul>
+                <li><a href="https://del.icio.us">Home</a></li>
+                <li><a href="https://del.icio.us/about">About</a></li>
+                <li><a href="https://del.icio.us/apps">Apps</a></li>
+                <li><a href="http://blog.del.icio.us" target="_blank">Blog</a></li>
+                <li><a href="https://del.icio.us/branding">Branding</a></li>
+                <li><a href="https://del.icio.us/copyright">Copyright</a></li>
+                <li><a href="https://del.icio.us/help">Help</a></li>
+                <li><a href="https://del.icio.us/privacy">Privacy</a></li>
+                <li><a href="https://del.icio.us/rss">RSS</a></li>
+                <li><a href="https://del.icio.us/terms">Terms</a></li>
+                <li><a href="https://del.icio.us/tools">Tools</a></li>
+            </ul>
+        </div>
+        <div class="footerRight">
+          <p>&copy; 2017 Maciej Ceglowski</p>
+        </div>
+    </div>
+</div>
+<!--footer panel ends-->
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100970508); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100970508ns.gif" /></p></noscript>
+<div id="fb-root"></div>
+</body>
+</html>
