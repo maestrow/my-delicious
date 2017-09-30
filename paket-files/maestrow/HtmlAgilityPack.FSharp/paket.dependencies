@@ -1,4 +1,0 @@
-storage: none
-source https://www.nuget.org/api/v2
-
-nuget HtmlAgilityPack.CssSelectors.NetCore
